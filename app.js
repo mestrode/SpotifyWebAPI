@@ -183,7 +183,7 @@ function handlePlaylistsResponse(){
 function addPlaylist(item){
     let node = document.createElement("option");
     node.value = item.id;
-    node.innerHTML = item.name + " (" + item.tracks.total + ")";
+    node.innerHTML = item.name + " (" + item.items.total + ")";
     document.getElementById("playlists").appendChild(node); 
 }
 
