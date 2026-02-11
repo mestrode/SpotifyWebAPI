@@ -1,7 +1,6 @@
-var redirect_uri = "https://makeratplay.github.io/SpotifyWebAPI/"; // change this your value
+var redirect_uri = "https://mestrode.github.io/SpotifyWebAPI/"; // change this your value
 //var redirect_uri = "http://127.0.0.1:5500/index.html";
  
-
 var client_id = ""; 
 var client_secret = ""; // In a real app you should not expose your client_secret to the user
 
@@ -10,18 +9,18 @@ var refresh_token = null;
 var currentPlaylist = "";
 var radioButtons = [];
 
-const AUTHORIZE = "https://accounts.spotify.com/authorize"
-const TOKEN = "https://accounts.spotify.com/api/token";
-const PLAYLISTS = "https://api.spotify.com/v1/me/playlists";
-const DEVICES = "https://api.spotify.com/v1/me/player/devices";
-const PLAY = "https://api.spotify.com/v1/me/player/play";
-const PAUSE = "https://api.spotify.com/v1/me/player/pause";
-const NEXT = "https://api.spotify.com/v1/me/player/next";
-const PREVIOUS = "https://api.spotify.com/v1/me/player/previous";
-const PLAYER = "https://api.spotify.com/v1/me/player";
-const TRACKS = "https://api.spotify.com/v1/playlists/{{PlaylistId}}/tracks";
+const AUTHORIZE =        "https://accounts.spotify.com/authorize"
+const TOKEN =            "https://accounts.spotify.com/api/token";
+const PLAYLISTS =        "https://api.spotify.com/v1/me/playlists";
+const DEVICES =          "https://api.spotify.com/v1/me/player/devices";
+const PLAY =             "https://api.spotify.com/v1/me/player/play";
+const PAUSE =            "https://api.spotify.com/v1/me/player/pause";
+const NEXT =             "https://api.spotify.com/v1/me/player/next";
+const PREVIOUS =         "https://api.spotify.com/v1/me/player/previous";
+const PLAYER =           "https://api.spotify.com/v1/me/player";
+const TRACKS =           "https://api.spotify.com/v1/playlists/{{PlaylistId}}/tracks";
 const CURRENTLYPLAYING = "https://api.spotify.com/v1/me/player/currently-playing";
-const SHUFFLE = "https://api.spotify.com/v1/me/player/shuffle";
+const SHUFFLE =          "https://api.spotify.com/v1/me/player/shuffle";
 
 function onPageLoad(){
     client_id = localStorage.getItem("client_id");
@@ -301,7 +300,6 @@ function handleCurrentlyPlayingResponse(){
             document.getElementById("trackTitle").innerHTML = data.item.name;
             document.getElementById("trackArtist").innerHTML = data.item.artists[0].name;
         }
-
 
         if ( data.device != null ){
             // select device
